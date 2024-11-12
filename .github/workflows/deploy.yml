@@ -26,7 +26,7 @@ jobs:
 
       - name: Build, tag, and push Streamlit Docker image
         run: |
-          docker build -t streamlit ./streamlit
+          docker build -t streamlit-app ./streamlit-app
           docker tag streamlit-app:latest ${{ steps.login-ecr.outputs.registry }}/streamlit-app:latest
           docker push ${{ steps.login-ecr.outputs.registry }}/streamlit-app:latest
 
